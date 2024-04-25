@@ -69,7 +69,7 @@ struct DeepBreathingView: View {
                 
                 Text("\(timeRemaining) seconds remaining...")
                     .font(.title3)
-                    .foregroundColor(Color.red)
+                    .foregroundColor(Color.red).bold()
                 
                 Spacer()
                 
@@ -124,6 +124,7 @@ struct DeepBreathingView: View {
             ForEach(reflectionQuestions, id: \.self) { question in
                 Text(question)
                     .padding()
+                    .bold()
                     .frame(maxWidth: .infinity)
                     .background(Color.white)
                     .cornerRadius(10)

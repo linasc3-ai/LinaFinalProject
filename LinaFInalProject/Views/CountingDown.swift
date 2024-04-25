@@ -67,6 +67,8 @@ struct CountingDown: View {
                 updateProgress()
             }
             .onAppear {
+                // add the number of steps to global step count 
+                viewModel.addSteps(currSteps: viewModel.steps)
                 resetProgress()
             }
         }

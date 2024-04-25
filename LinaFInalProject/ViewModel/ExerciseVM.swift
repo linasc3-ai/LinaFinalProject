@@ -9,9 +9,12 @@
 import Foundation
 import CoreMotion
 import Combine
+import CoreData
+import SwiftUI
 
 class ExerciseVM: ObservableObject {
     @Published var duration = ""
+    @AppStorage("NumberSteps") private var NumberSteps: Int = 0
     @Published var timeRemaining: Int = 0
     @Published var steps: Int = 0
     @Published var isCollectingData: Bool = false
@@ -19,7 +22,7 @@ class ExerciseVM: ObservableObject {
     let timerPublisher = PassthroughSubject<Void, Never>() // Publisher for timer ticks
     private let pedometer = CMPedometer()
     private let defaults = UserDefaults.standard
-    
+
     init() {
         requestPedometerAuthorization() // Request authorization upon initialization
     }
@@ -36,6 +39,16 @@ class ExerciseVM: ObservableObject {
             // The completion handler is required but we don't need to do anything here for now.
         }
     }
+    
+    // add current steps to global step storage
+    func addSteps(currSteps: Int) {
+        NumberSteps += steps
+    }
+    
+    // Computed property to read the number of steps
+        var stepCount: Int {
+            NumberSteps
+        }
     
     func saveExerciseData(emotion: EmotionM) {
         let exerciseData = ExerciseM(date: Date(), steps: steps, duration: Int(duration) ?? 0, emotion: emotion)

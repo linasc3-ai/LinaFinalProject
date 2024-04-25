@@ -9,7 +9,7 @@ import SwiftUI
 import CoreMotion
 
 struct ExerciseViews: View {
-    @StateObject private var viewModel = ExerciseVM()
+    @EnvironmentObject var viewModel: ExerciseVM
     @State private var showCountdownView = false
     @State private var showPermissionDeniedAlert = false
 
