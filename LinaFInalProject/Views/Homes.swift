@@ -77,7 +77,7 @@ struct Homes: View {
                 .padding(.horizontal)
                 .foregroundStyle(.blue)
             
-            Text("Reviewing your stats can help you reflect on your mental health as you exercise.")
+            Text("Reviewing your stats can help you reflect on your mental health as you exercise.").padding(.horizontal)
             
             emotionFrequencyChart
             severityRatingsChart
