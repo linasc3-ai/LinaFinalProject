@@ -7,17 +7,17 @@ struct DeepBreathingView: View {
     @State private var progress: CGFloat = 1
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
-    // reflection questions to display
+    // Reflection questions to display
     let reflectionQuestions = [
-            "What part of the workout did you enjoy the most?",
-            "How did you feel during your workout?",
-            "Did you achieve your exercise goal today?",
-            "What could make your next workout better?",
-            "How do you feel now after completing your workout?"
-        ]
+        "What part of the workout did you enjoy the most?",
+        "How did you feel during your workout?",
+        "Did you achieve your exercise goal today?",
+        "What could make your next workout better?",
+        "How do you feel now after completing your workout?"
+    ]
 
     var body: some View {
-        ScrollView{
+        ScrollView {
             VStack {
                 // Header with Logo and Title
                 HStack(spacing: 10) {
@@ -39,6 +39,7 @@ struct DeepBreathingView: View {
                 Text("Time for a cool down...")
                     .font(.title2)
                     .fontWeight(.semibold)
+                    .foregroundColor(Color.blue)
                     .padding(.top, 20)
                 
                 Spacer()
@@ -59,7 +60,7 @@ struct DeepBreathingView: View {
                     Text("Breathe")
                         .font(.largeTitle)
                         .fontWeight(.bold)
-                        .foregroundColor(Color.red)
+                        .foregroundColor(Color.blue)
                 }
                 .frame(width: 250, height: 250)
                 .padding(.vertical, 30)
@@ -73,12 +74,14 @@ struct DeepBreathingView: View {
                 Spacer()
                 
                 Text("Swipe through these questions below \n for ideas on how to reflect mentally \n  about your workout session.")
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal)
+                
                 reflectionTabView
                 
                 Spacer()
                 
                 if timeRemaining == 0 {
-                    
                     VStack {
                         Text("Great work! You've successfully completed your exercise and emotion reflection.")
                             .multilineTextAlignment(.center)
@@ -108,6 +111,7 @@ struct DeepBreathingView: View {
                 }
             }
         }
+        .background(Color(red: 0.8, green: 0.9, blue: 1.0)) // Light/pastel blue background
     }
 
     func startBreathingExercise() {
@@ -116,23 +120,22 @@ struct DeepBreathingView: View {
     }
     
     var reflectionTabView: some View {
-            TabView {
-                ForEach(reflectionQuestions, id: \.self) { question in
-                    Text(question)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.white)
-                        .cornerRadius(10)
-                        .shadow(radius: 2)
-                        .padding(.horizontal)
-                }
+        TabView {
+            ForEach(reflectionQuestions, id: \.self) { question in
+                Text(question)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.white)
+                    .cornerRadius(10)
+                    .shadow(radius: 2)
+                    .padding(.horizontal)
             }
-            .tabViewStyle(PageTabViewStyle())
-            .frame(height: 150)
         }
+        .tabViewStyle(PageTabViewStyle())
+        .frame(height: 150)
+    }
 }
 
-//
 //struct CooldownView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        DeepBreathingView()
