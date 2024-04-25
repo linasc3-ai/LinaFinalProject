@@ -8,12 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		A2B008A42BDAA7A200DE17D8 /* LinaFinalProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B008A32BDAA7A200DE17D8 /* LinaFinalProjectApp.swift */; };
-		A2B008A62BDAA7A200DE17D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B008A52BDAA7A200DE17D8 /* ContentView.swift */; };
 		A2B008A82BDAA7A400DE17D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2B008A72BDAA7A400DE17D8 /* Assets.xcassets */; };
 		A2B008AB2BDAA7A400DE17D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2B008AA2BDAA7A400DE17D8 /* Preview Assets.xcassets */; };
 		A2B008B52BDAA7A400DE17D8 /* LinaFinalProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B008B42BDAA7A400DE17D8 /* LinaFinalProjectTests.swift */; };
 		A2B008BF2BDAA7A400DE17D8 /* LinaFinalProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B008BE2BDAA7A400DE17D8 /* LinaFinalProjectUITests.swift */; };
 		A2B008C12BDAA7A400DE17D8 /* LinaFinalProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B008C02BDAA7A400DE17D8 /* LinaFinalProjectUITestsLaunchTests.swift */; };
+		A2B008D12BDAA80900DE17D8 /* ExerciseViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B008D02BDAA80900DE17D8 /* ExerciseViews.swift */; };
+		A2B008D32BDAA82A00DE17D8 /* Homes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B008D22BDAA82A00DE17D8 /* Homes.swift */; };
+		A2B008D52BDAA84A00DE17D8 /* EmotionSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B008D42BDAA84A00DE17D8 /* EmotionSurvey.swift */; };
+		A2B008D72BDAA87500DE17D8 /* DeepBreathingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B008D62BDAA87500DE17D8 /* DeepBreathingView.swift */; };
+		A2B008D92BDAA8C700DE17D8 /* CountingDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B008D82BDAA8C700DE17D8 /* CountingDown.swift */; };
+		A2B008DB2BDAA8E600DE17D8 /* EmotionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B008DA2BDAA8E600DE17D8 /* EmotionVM.swift */; };
+		A2B008DD2BDAA8FE00DE17D8 /* ExerciseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B008DC2BDAA8FE00DE17D8 /* ExerciseVM.swift */; };
+		A2B008DF2BDAA94300DE17D8 /* EmotionM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B008DE2BDAA94300DE17D8 /* EmotionM.swift */; };
+		A2B008E12BDAA95300DE17D8 /* ExerciseM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B008E02BDAA95300DE17D8 /* ExerciseM.swift */; };
+		A2B008E42BDAA97800DE17D8 /* EmotionCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2B008E22BDAA97800DE17D8 /* EmotionCoreData.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +45,6 @@
 /* Begin PBXFileReference section */
 		A2B008A02BDAA7A200DE17D8 /* LinaFinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinaFinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B008A32BDAA7A200DE17D8 /* LinaFinalProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinaFinalProjectApp.swift; sourceTree = "<group>"; };
-		A2B008A52BDAA7A200DE17D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A2B008A72BDAA7A400DE17D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2B008AA2BDAA7A400DE17D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A2B008B02BDAA7A400DE17D8 /* LinaFinalProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LinaFinalProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +52,17 @@
 		A2B008BA2BDAA7A400DE17D8 /* LinaFinalProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LinaFinalProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B008BE2BDAA7A400DE17D8 /* LinaFinalProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinaFinalProjectUITests.swift; sourceTree = "<group>"; };
 		A2B008C02BDAA7A400DE17D8 /* LinaFinalProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinaFinalProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A2B008D02BDAA80900DE17D8 /* ExerciseViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViews.swift; sourceTree = "<group>"; };
+		A2B008D22BDAA82A00DE17D8 /* Homes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homes.swift; sourceTree = "<group>"; };
+		A2B008D42BDAA84A00DE17D8 /* EmotionSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionSurvey.swift; sourceTree = "<group>"; };
+		A2B008D62BDAA87500DE17D8 /* DeepBreathingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepBreathingView.swift; sourceTree = "<group>"; };
+		A2B008D82BDAA8C700DE17D8 /* CountingDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingDown.swift; sourceTree = "<group>"; };
+		A2B008DA2BDAA8E600DE17D8 /* EmotionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionVM.swift; sourceTree = "<group>"; };
+		A2B008DC2BDAA8FE00DE17D8 /* ExerciseVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseVM.swift; sourceTree = "<group>"; };
+		A2B008DE2BDAA94300DE17D8 /* EmotionM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionM.swift; sourceTree = "<group>"; };
+		A2B008E02BDAA95300DE17D8 /* ExerciseM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseM.swift; sourceTree = "<group>"; };
+		A2B008E32BDAA97800DE17D8 /* EmotionCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmotionCoreData.xcdatamodel; sourceTree = "<group>"; };
+		A2B008E52BDAAAA800DE17D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +93,7 @@
 		A2B008972BDAA7A200DE17D8 = {
 			isa = PBXGroup;
 			children = (
-				A2B008A22BDAA7A200DE17D8 /* LinaFinalProject */,
+				A2B008A22BDAA7A200DE17D8 /* LinaFInalProject */,
 				A2B008B32BDAA7A400DE17D8 /* LinaFinalProjectTests */,
 				A2B008BD2BDAA7A400DE17D8 /* LinaFinalProjectUITests */,
 				A2B008A12BDAA7A200DE17D8 /* Products */,
@@ -91,15 +110,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A2B008A22BDAA7A200DE17D8 /* LinaFinalProject */ = {
+		A2B008A22BDAA7A200DE17D8 /* LinaFInalProject */ = {
 			isa = PBXGroup;
 			children = (
+				A2B008E52BDAAAA800DE17D8 /* Info.plist */,
+				A2B008CF2BDAA7E600DE17D8 /* ViewModel */,
+				A2B008CE2BDAA7DA00DE17D8 /* Models */,
+				A2B008CD2BDAA7D200DE17D8 /* Views */,
 				A2B008A32BDAA7A200DE17D8 /* LinaFinalProjectApp.swift */,
-				A2B008A52BDAA7A200DE17D8 /* ContentView.swift */,
 				A2B008A72BDAA7A400DE17D8 /* Assets.xcassets */,
 				A2B008A92BDAA7A400DE17D8 /* Preview Content */,
 			);
-			path = LinaFinalProject;
+			path = LinaFInalProject;
 			sourceTree = "<group>";
 		};
 		A2B008A92BDAA7A400DE17D8 /* Preview Content */ = {
@@ -125,6 +147,37 @@
 				A2B008C02BDAA7A400DE17D8 /* LinaFinalProjectUITestsLaunchTests.swift */,
 			);
 			path = LinaFinalProjectUITests;
+			sourceTree = "<group>";
+		};
+		A2B008CD2BDAA7D200DE17D8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A2B008D02BDAA80900DE17D8 /* ExerciseViews.swift */,
+				A2B008D22BDAA82A00DE17D8 /* Homes.swift */,
+				A2B008D42BDAA84A00DE17D8 /* EmotionSurvey.swift */,
+				A2B008D62BDAA87500DE17D8 /* DeepBreathingView.swift */,
+				A2B008D82BDAA8C700DE17D8 /* CountingDown.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A2B008CE2BDAA7DA00DE17D8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A2B008DE2BDAA94300DE17D8 /* EmotionM.swift */,
+				A2B008E02BDAA95300DE17D8 /* ExerciseM.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A2B008CF2BDAA7E600DE17D8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A2B008DA2BDAA8E600DE17D8 /* EmotionVM.swift */,
+				A2B008DC2BDAA8FE00DE17D8 /* ExerciseVM.swift */,
+				A2B008E22BDAA97800DE17D8 /* EmotionCoreData.xcdatamodeld */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +310,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2B008A62BDAA7A200DE17D8 /* ContentView.swift in Sources */,
+				A2B008D92BDAA8C700DE17D8 /* CountingDown.swift in Sources */,
+				A2B008D32BDAA82A00DE17D8 /* Homes.swift in Sources */,
+				A2B008D72BDAA87500DE17D8 /* DeepBreathingView.swift in Sources */,
+				A2B008D12BDAA80900DE17D8 /* ExerciseViews.swift in Sources */,
 				A2B008A42BDAA7A200DE17D8 /* LinaFinalProjectApp.swift in Sources */,
+				A2B008DB2BDAA8E600DE17D8 /* EmotionVM.swift in Sources */,
+				A2B008DD2BDAA8FE00DE17D8 /* ExerciseVM.swift in Sources */,
+				A2B008DF2BDAA94300DE17D8 /* EmotionM.swift in Sources */,
+				A2B008E42BDAA97800DE17D8 /* EmotionCoreData.xcdatamodeld in Sources */,
+				A2B008D52BDAA84A00DE17D8 /* EmotionSurvey.swift in Sources */,
+				A2B008E12BDAA95300DE17D8 /* ExerciseM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +487,8 @@
 				DEVELOPMENT_TEAM = FZ2X672MY6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LinaFinalProject/Info.plist;
+				INFOPLIST_KEY_NSMotionUsageDescription = "To track step data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -454,6 +518,8 @@
 				DEVELOPMENT_TEAM = FZ2X672MY6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LinaFinalProject/Info.plist;
+				INFOPLIST_KEY_NSMotionUsageDescription = "To track step data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -588,6 +654,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A2B008E22BDAA97800DE17D8 /* EmotionCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A2B008E32BDAA97800DE17D8 /* EmotionCoreData.xcdatamodel */,
+			);
+			currentVersion = A2B008E32BDAA97800DE17D8 /* EmotionCoreData.xcdatamodel */;
+			path = EmotionCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A2B008982BDAA7A200DE17D8 /* Project object */;
 }

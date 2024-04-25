@@ -15,65 +15,70 @@ struct ExerciseViews: View {
 
     var body: some View {
         NavigationView {
-            VStack {
+            ZStack{
+                Color(.blue).ignoresSafeArea()
                 
-                HStack(spacing: 10) {
-                    Image("PennFitLogo")
-                        .resizable()
-                        .cornerRadius(15)
-                        .scaledToFit()
-                        .frame(width: 50, height: 50)
-                        .shadow(radius: 5)
-
-                    Text("PennFit")
+                VStack {
+                    
+                    HStack(spacing: 10) {
+                        Image("PennFitLogo")
+                            .resizable()
+                            .cornerRadius(15)
+                            .scaledToFit()
+                            .frame(width: 50, height: 50)
+                            .shadow(radius: 5)
+                            .foregroundStyle(.white)
+                        
+                        Text("PennFit")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.white)
+                    }
+                    .padding(.top, 20)
+                    .padding(.horizontal)
+                    
+                    
+                    
+                    Text("Let's Get Started!")
                         .font(.largeTitle)
                         .fontWeight(.bold)
-                        .foregroundColor(Color.blue)
-                }
-                .padding(.top, 20)
-                .padding(.horizontal)
-
-                
-                
-                Text("Let's Get Started!")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .padding()
-                
-                Text("PennFit is here to help you exercise with your mental health in mind. After your workout, we'll walk you through a few reflection steps to make sure you feel more in control of any negative emotions.")
-
-                TextField("Enter exercising duration (minutes)", text: $viewModel.duration)
-                    .keyboardType(.numberPad)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-
-                Button("Start Workout") {
-                    // Check if step counting is available before starting
-                    if CMPedometer.isStepCountingAvailable() {
-                        viewModel.startExercise()
-                        withAnimation {
-                            showCountdownView = true
+                        .foregroundStyle(.white)
+                        .padding()
+                    
+                    Text("PennFit is here to help you exercise with your mental health in mind.").foregroundStyle(.white)
+                    
+                    TextField("Enter exercise duration (minutes)", text: $viewModel.duration)
+                        .keyboardType(.numberPad)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding()
+                    
+                    Button("Start Workout") {
+                        // Check if step counting is available before starting
+                        if CMPedometer.isStepCountingAvailable() {
+                            viewModel.startExercise()
+                            withAnimation {
+                                showCountdownView = true
+                            }
+                        } else {
+                            showPermissionDeniedAlert = true
                         }
-                    } else {
-                        showPermissionDeniedAlert = true
                     }
-                }
-                .disabled(viewModel.isCollectingData || viewModel.duration.isEmpty)
-                .buttonStyle(StartButtonStyle())
-                .padding()
-                .alert(isPresented: $showPermissionDeniedAlert) {
-                    Alert(
-                        title: Text("Permission Denied"),
-                        message: Text("Please enable motion & fitness tracking in settings."),
-                        dismissButton: .default(Text("OK"))
-                    )
-                }
-
-                NavigationLink(destination: CountingDown(viewModel: viewModel), isActive: $showCountdownView) {
-                    EmptyView()
-                }
-                .hidden()
-            }
+                    .disabled(viewModel.isCollectingData || viewModel.duration.isEmpty)
+                    .buttonStyle(StartButtonStyle())
+                    .padding()
+                    .alert(isPresented: $showPermissionDeniedAlert) {
+                        Alert(
+                            title: Text("Permission Denied"),
+                            message: Text("Please enable motion & fitness tracking in settings."),
+                            dismissButton: .default(Text("OK"))
+                        )
+                    }
+                    
+                    NavigationLink(destination: CountingDown(viewModel: viewModel), isActive: $showCountdownView) {
+                        EmptyView()
+                    }
+                    .hidden()
+                }}
             .navigationBarHidden(true)
         }
         .onAppear {
@@ -87,7 +92,7 @@ struct StartButtonStyle: ButtonStyle {
         configuration.label
             .foregroundColor(.white)
             .padding()
-            .background(Color.blue)
+            .background(Color.green)
             .cornerRadius(8)
             .scaleEffect(configuration.isPressed ? 0.95 : 1.0)
     }

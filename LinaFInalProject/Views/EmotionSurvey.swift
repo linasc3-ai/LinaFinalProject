@@ -92,7 +92,7 @@ struct EmotionSurvey: View {
                 viewmodelEmotions.saveEmotion(emotion: currentEmotion)
                 isActive = true // Trigger navigation
             }
-            .buttonStyle(RoundedRectangleButtonStyle(backgroundColor: Color.blue, foregroundColor: .white))
+            .buttonStyle(RoundedRectangleButtonStyle(backgroundColor: Color.green, foregroundColor: .white))
             
             NavigationLink(destination: DeepBreathingView(), isActive: $isActive) {
                 EmptyView()

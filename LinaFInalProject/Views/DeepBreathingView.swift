@@ -17,6 +17,7 @@ struct DeepBreathingView: View {
         ]
 
     var body: some View {
+        ScrollView{
             VStack {
                 // Header with Logo and Title
                 HStack(spacing: 10) {
@@ -26,7 +27,7 @@ struct DeepBreathingView: View {
                         .scaledToFit()
                         .frame(width: 50, height: 50)
                         .shadow(radius: 5)
-
+                    
                     Text("PennFit")
                         .font(.largeTitle)
                         .fontWeight(.bold)
@@ -34,29 +35,27 @@ struct DeepBreathingView: View {
                 }
                 .padding(.top, 20)
                 .padding(.horizontal)
-
+                
                 Text("Time for a cool down...")
                     .font(.title2)
                     .fontWeight(.semibold)
                     .padding(.top, 20)
-
-                Text("It's important to take time to breathe and reflect on how the workout made you feel.")
                 
                 Spacer()
-
+                
                 // Progress Circle and Breathe Text
                 ZStack {
                     Circle()
                         .stroke(lineWidth: 10)
                         .opacity(0.3)
                         .foregroundColor(Color.blue.opacity(0.5))
-
+                    
                     Circle()
                         .trim(from: 0, to: progress)
                         .stroke(Color.blue, lineWidth: 10)
                         .rotationEffect(.degrees(-90))
                         .animation(.linear(duration: 1), value: progress)
-
+                    
                     Text("Breathe")
                         .font(.largeTitle)
                         .fontWeight(.bold)
@@ -64,19 +63,20 @@ struct DeepBreathingView: View {
                 }
                 .frame(width: 250, height: 250)
                 .padding(.vertical, 30)
-
+                
                 Spacer()
-
+                
                 Text("\(timeRemaining) seconds remaining...")
                     .font(.title3)
                     .foregroundColor(Color.red)
-
+                
                 Spacer()
-                Text("Swipe through these questions for ideas on what to reflect on while you breathe.")
+                
+                Text("Swipe through these questions below \n for ideas on how to reflect mentally \n  about your workout session.")
                 reflectionTabView
                 
                 Spacer()
-
+                
                 if timeRemaining == 0 {
                     
                     VStack {
@@ -89,7 +89,7 @@ struct DeepBreathingView: View {
                                 .fontWeight(.semibold)
                                 .foregroundColor(.white)
                                 .padding()
-                                .background(Color.blue)
+                                .background(Color.green)
                                 .cornerRadius(10)
                         }
                     }
@@ -107,6 +107,7 @@ struct DeepBreathingView: View {
                     self.timer.upstream.connect().cancel()
                 }
             }
+        }
     }
 
     func startBreathingExercise() {
@@ -131,9 +132,9 @@ struct DeepBreathingView: View {
         }
 }
 
-
-struct CooldownView_Previews: PreviewProvider {
-    static var previews: some View {
-        DeepBreathingView()
-    }
-}
+//
+//struct CooldownView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DeepBreathingView()
+//    }
+//}

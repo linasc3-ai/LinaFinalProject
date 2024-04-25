@@ -54,7 +54,7 @@ struct CountingDown: View {
                         Text("End Workout")
                             .fontWeight(.semibold)
                             .frame(width: 200, height: 50)
-                            .background(Color.blue)
+                            .background(Color.green)
                             .foregroundColor(.white)
                             .cornerRadius(15)
                     }
